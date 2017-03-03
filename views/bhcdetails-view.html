@@ -1,0 +1,14 @@
+<br>
+<div class="row" ng-init="getBhcDetails();">
+    <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+        <div class="content-wrapper">
+            <h4><b>{{bhc.name}}</b></h4>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+        <!-- custom directives -->
+        <book-details ng-show="showBook"></book-details>
+        <house-details ng-show="showHouse"></house-details>
+        <character-details ng-show="showCharacter"></character-details>
+    </div>
+</div><!-- end row -->

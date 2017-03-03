@@ -1,0 +1,50 @@
+<div id="top" class="row">
+    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label>sort</label>
+            <select class="form-control" ng-model="sortProp">
+                <option value="+name">a-z</option>
+                <option value="-name">z-a</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label>category</label>
+            <select class="form-control" ng-model="type">
+                <option value="">select category</option>
+                <option value="books">books</option>
+                <option value="houses">houses</option>
+                <option value="characters">characters</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label>search</label>
+            <input type="text" class="form-control" ng-model="searchBhc" placeholder="book/house/character ..."/>
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-init="getBooks();getHouses(1);getCharacters(1);">
+    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+        <br>
+        <h4><b>Game Of Thrones</b></h4>
+        <br>
+        <div class="row">
+            <div ng-repeat="bhc in gotData | orderBy : sortProp | pushToEnd : 'name' | category : type | filter : searchBhc track by $index">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div ng-bhc></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <a ng-click="scrollTo('top')" class="go-to-top" style="display: inline;">
+                <i class="fa fa-3x fa-arrow-circle-up"></i>
+            </a>
+    </div>
+</div>
+

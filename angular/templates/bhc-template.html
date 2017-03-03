@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div ng-class="getType(bhc.url);">
+        <h5><i ng-class="getIcon(bhc.url);" aria-hidden="true"></i>
+            <b>{{ getHeading(bhc.url) }}</b>
+        </h5>
+    </div>
+    <div class="panel-body">
+        <a href="#/bhcdetails/{{getUrlPrameters(bhc.url)}}">{{ (bhc.name == "") ? bhc.aliases[0] : bhc.name }}</a>
+    </div>
+</div>

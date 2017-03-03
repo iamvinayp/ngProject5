@@ -1,0 +1,95 @@
+        <!-- Nav tabs character-->
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a data-target="#characterdetails" data-toggle="tab">Character details</a>
+            </li>
+            <li>
+                <a data-target="#bookspovBooks" data-toggle="tab">Books&amp;POV books</a>
+            </li>
+            <li>
+                <a data-target="#tvSeries" data-toggle="tab">TV series</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="characterdetails" class="tab-pane fade in active">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <td><b>Name</b></td>
+                                <td>{{bhc.name}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Gender</b></td>
+                                <td>{{bhc.gender}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Culture</b></td>
+                                <td>{{bhc.culture}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Born</b></td>
+                                <td>{{bhc.born}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Died</b></td>
+                                <td>{{bhc.died}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Titles</b></td>
+                                <td><span ng-repeat="title in bhc.titles">{{title}},<br></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Aliases</b></td>
+                                <td><span ng-repeat="alias in bhc.aliases">{{alias}},<br></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Father</b></td>
+                                <td>{{father}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Mother</b></td>
+                                <td>{{mother}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Spouse</b></td>
+                                <td>{{spouse}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Allegiances</b></td>
+                                <td><span ng-repeat="allegiance in allegiances">{{allegiance}},<br></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Played by</b></td>
+                                <td><span ng-repeat="actor in bhc.playedBy">{{actor}},<br></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="bookspovBooks" class="tab-pane fade">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <td><b>Books</b></td>
+                                <td><span ng-repeat="book in books">{{book}},<br></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>POV Books</b></td>
+                                <td><span ng-repeat="povBook in povBooks ">{{povBook}},<br></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tvSeries" class="tab-pane fade">
+                <ul>
+                    <li ng-repeat="tvSerial in bhc.tvSeries">
+                        {{ tvSerial }}
+                    </li>
+                </ul>
+            </div>
+        </div><!-- tab content -->

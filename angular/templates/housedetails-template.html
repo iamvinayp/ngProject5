@@ -1,0 +1,80 @@
+        <!-- Nav tabs house-->
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a data-target="#housedetails" data-toggle="tab">House details</a>
+            </li>
+            <li>
+                <a data-target="#cadetbranches" data-toggle="tab">Cadet branches</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes-->
+        <div class="tab-content">
+            <div id="housedetails" class="tab-pane fade in active">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <td><b>Name</b></td>
+                                <td>{{bhc.name}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Region</b></td>
+                                <td>{{bhc.region}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Coat of arms</b></td>
+                                <td>{{bhc.coatOfArms}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Words</b></td>
+                                <td>{{bhc.words}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Titles</b></td>
+                                <td><span ng-repeat="title in bhc.titles">{{title}},<br></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Seats</b></td>
+                                <td><span ng-repeat="seat in bhc.seats">{{seat}},<br></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Current Lord</b></td>
+                                <td>{{currentLord}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Heir</b></td>
+                                <td>{{heir}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Overlord</b></td>
+                                <td>{{overlord}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Founded</b></td>
+                                <td>{{bhc.founded}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Founder</b></td>
+                                <td>{{founder}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Diedout</b></td>
+                                <td>{{bhc.diedOut}}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Ancestral weapons</b></td>
+                                <td><span ng-repeat="ancestralWeapon in bhc.ancestralWeapons">{{ancestralWeapons}},<br></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="cadetbranches" class="tab-pane fade">
+                <ul>
+                    <li ng-repeat="cadetBranch in cadetBranches">
+                        {{ cadetBranch }}
+                    </li>
+                </ul>
+            </div>
+        </div>

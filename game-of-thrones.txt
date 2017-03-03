@@ -1,0 +1,5 @@
+books      - 12
+houses     - 444
+characters - 2138[2134-!1509,!1510,!1511,!1995]
+
+characters with no names: 1, 2 thru 11

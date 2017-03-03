@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gotApp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Advance angularjs project">
+    <meta name="author" content="Vinay Patil">
+
+    <title>Advance Angular</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme Css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-target="#mainNav" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/home">
+                    <img src="images/gameofthrones.png"
+                     alt="Game Of Thrones">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="mainNav">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/bhc">Books|Houses|Characters</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <div id="main" class="container">
+            <div ng-view class="view-slide-in">
+            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 footercol">
+                        Copyright &copy; iamVinay 2017. All Rights Reserved.
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="list-inline">
+                            <li>Privacy</li>
+                            <li>Terms</li>
+                            <li>Home</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- angular cdn scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+    <!-- Angular Application -->
+    <script type="text/javascript" src="angular/app.js"></script>
+
+    <!-- calling all controllers -->
+    <script type="text/javascript" src="angular/controllers/mainController.js"></script>
+    <script type="text/javascript" src="angular/controllers/bhcDetailsController.js"></script>
+
+    <!-- including custom services -->
+    <script type="text/javascript" src="angular/services/gotService.js"></script>
+
+    <!-- including custom filters -->
+    <script type="text/javascript" src="angular/filters/pushToEndFilter.js"></script>
+    <script type="text/javascript" src="angular/filters/categoryFilter.js"></script>
+
+    <!-- including custom directives -->
+    <script type="text/javascript" src="angular/directives/gotDirective.js"></script>
+    <script type="text/javascript" src="angular/directives/bookdetailsDirective.js"></script>
+    <script type="text/javascript" src="angular/directives/housedetailsDirective.js"></script>
+    <script type="text/javascript" src="angular/directives/characterdetailsDirective.js"></script>
+
+    <!-- angular routes -->
+    <script type="text/javascript" src="angular/routes.js"></script>
+
+</body>
+</html>
